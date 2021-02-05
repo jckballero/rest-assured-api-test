@@ -1,0 +1,40 @@
+Request method:	PATCH
+,Request URI:	https://reqres.in/api/users/2
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+2				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "name": "morpheus",
+    "job": "zion resident"
+}
+HTTP/1.1 200 OK
+%Date: Fri, 05 Feb 2021 05:41:15 GMT
+/Content-Type: application/json; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+¢Set-Cookie: __cfduid=d4c4c0a56cfe7a29afa1dff00b24df9b21612503675; expires=Sun, 07-Mar-21 05:41:15 GMT; path=/; domain=.reqres.in; HttpOnly; SameSite=Lax; Secure
+X-Powered-By: Express
+ Access-Control-Allow-Origin: *
+*Etag: W/"50-PA2//zmHJZt0hEp44NyVThmNsV4"
+Via: 1.1 vegur
+CF-Cache-Status: DYNAMIC
+1cf-request-id: 08124e897d0000c89f4e32a000000001
+dExpect-CT: max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"
+ÜReport-To: {"group":"cf-nel","endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report?s=GaU3Bu8V14m4Tx1HDMObqSVhD717983mR42Ebu9ZoO36TkV6bXxiGaBOuutYWBxdgjwhSzjxj0S7pBcyw5o7j%2Boo6%2FhGxBxEiq4%3D"}],"max_age":604800}
+.NEL: {"max_age":604800,"report_to":"cf-nel"}
+Server: cloudflare
+CF-RAY: 61ca4d226de4c89f-MIA
+Content-Encoding: gzip
+
+{
+    "name": "morpheus",
+    "job": "zion resident",
+,    "updatedAt": "2021-02-05T05:41:15.464Z"
+}
