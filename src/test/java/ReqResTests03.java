@@ -3,6 +3,9 @@ import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
 import io.restassured.filter.log.ResponseLoggingFilter;
 import io.restassured.http.ContentType;
+import io.restassured.http.Header;
+import io.restassured.http.Headers;
+import io.restassured.response.Response;
 import org.apache.http.HttpStatus;
 import org.junit.Before;
 import org.junit.Test;
@@ -79,5 +82,25 @@ public class ReqResTests03 {
                 .jsonPath().getString("job");
 
         assertThat(jodUpdated, equalTo("zion resident"));
+    }
+
+    //Sexto test optener header, content type etc
+    @Test
+    public void getAllUsersTest() {
+        Response response = given()
+                .get("users?page2");
+
+        Headers headers = response.getHeaders();
+        int statusCode = response.getStatusCode();
+        String body = response.getBody().asString();
+        String contentType = response.getContentType();
+
+        assertThat(statusCode, equalTo(HttpStatus.SC_OK));
+        System.out.println("body: " + body);
+        System.out.println("Content type: " + contentType);
+        System.out.println("Headers: " + headers.toString());
+        System.out.println("*************************************");
+        System.out.println(headers.get("Content-Type"));
+        System.out.println(headers.get("Transfer-Encoding"));
     }
 }
